@@ -1,0 +1,68 @@
+<div class="col-lg-8 offset-lg-2">
+    <h3>Edit Weather</h3>
+    <hr>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title mb-4">Update forecast details</h4>
+            <form id="editWeatherForm" onsubmit="event.preventDefault(); saveWeatherEdits()">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label for="edit_date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="edit_date" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="edit_location" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_temp_min" class="form-label">Minimum temperature (°C)</label>
+                        <input type="number" step="any" class="form-control" id="edit_temp_min" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_temp_max" class="form-label">Maximum temperature (°C)</label>
+                        <input type="number" step="any" class="form-control" id="edit_temp_max" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_weather_type" class="form-label">Weather type</label>
+                        <input type="text" class="form-control" id="edit_weather_type" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_precipitation" class="form-label">Precipitation</label>
+                        <input type="number" step="any" min="0" class="form-control" id="edit_precipitation" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_precipitation_probability" class="form-label">Precipitation probability (%)</label>
+                        <input type="number" step="any" min="0" max="100" class="form-control" id="edit_precipitation_probability" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_wind_speed" class="form-label">Wind speed (km/h)</label>
+                        <input type="number" step="any" min="0" class="form-control" id="edit_wind_speed" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_wind_direction" class="form-label">Wind direction</label>
+                        <input type="text" class="form-control" id="edit_wind_direction" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_humidity" class="form-label">Humidity (%)</label>
+                        <input type="number" step="any" min="0" max="100" class="form-control" id="edit_humidity" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_pressure" class="form-label">Pressure (hPa)</label>
+                        <input type="number" step="any" min="0" class="form-control" id="edit_pressure" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="edit_uv_index" class="form-label">UV Index</label>
+                        <input type="number" step="any" min="0" class="form-control" id="edit_uv_index" required>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between mt-4">
+                    <button type="button" class="btn btn-secondary" onclick="navigate('admin/forecasts')">Back</button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="bi bi-check-lg"></i>
+                        Save changes
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

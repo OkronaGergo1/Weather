@@ -1,0 +1,96 @@
+<h3>Manage Forecasts</h3>
+<hr>
+<table class="table table-hover table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Location</th>
+            <th>Min Temp</th>
+            <th>Max Temp</th>
+            <th>Weather Type</th>
+            <th class="text-end">Operations</th>
+        </tr>
+    </thead>
+    <tbody id="weatherList">
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="6" class="text-center">
+                Summary:
+                <strong id="forecastCount">0</strong>
+                forecast(s)
+            </td>
+        </tr>
+    </tfoot>
+</table>
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createForecastModal">
+    <i class="bi bi-plus-circle"></i>
+    Create Forecast
+</button>
+
+<div class="modal fade" id="createForecastModal" tabindex="-1" aria-labelledby="createForecastModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+            <form id="forecastForm" onsubmit="event.preventDefault(); createNewForecastForm()">
+                <div class="modal-header">
+                    <h2 class="modal-title fs-5" id="createForecastModalLabel">Create Forecast</h2>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="date" class="form-label">Date</label>
+                        <input type="date" class="form-control" id="date" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="temp_min" class="form-label">Minimum temperature (°C)</label>
+                        <input type="number" class="form-control" id="temp_min" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="temp_max" class="form-label">Maximum temperature (°C)</label>
+                        <input type="number" class="form-control" id="temp_max" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Weather type</label>
+                        <input type="text" class="form-control" id="weather_type" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Precipitation</label>
+                        <input type="number" class="form-control" id="precipitation" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Precipitation probability</label>
+                        <input type="number" class="form-control" id="precipitation_probability" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Wind speed</label>
+                        <input type="number" class="form-control" id="wind_speed" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Wind direction</label>
+                        <input type="text" class="form-control" id="wind_direction" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Humidity</label>
+                        <input type="number" class="form-control" id="Humidity" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">Pressure</label>
+                        <input type="number" class="form-control" id="Pressure" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="weather_type" class="form-label">UV Index</label>
+                        <input type="number" class="form-control" id="uv_index" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create Forecast</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
