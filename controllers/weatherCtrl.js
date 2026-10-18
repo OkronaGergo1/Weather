@@ -66,7 +66,7 @@ function addWeatherRow(weather, index) {
 }
 
 tdActions.innerHTML = `
-    <buttonclass="btn btn-sm btn-primary me-2" ${disabled} onclick="getWeatherDetails(${weather.id})">Details</button>
+    <button class="btn btn-sm btn-primary me-2" ${disabled} onclick="getWeatherDetails(${weather.id})">Details</button>
     ${adminButtons}
 `;
 
